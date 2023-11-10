@@ -7,10 +7,10 @@ ionopimax-objs += wiegand/wiegand.o
 ionopimax-objs += atecc/atecc.o
 
 all:
-	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) modules
+	make -C /lib/modules/$(shell uname -r)/ M=$(PWD) modules
 
 clean:
-	make -C /lib/modules/$(shell uname -r)/build/ M=$(PWD) clean
+	make -C /lib/modules/$(shell uname -r)/ M=$(PWD) clean
 
 install:
 	sudo install -m 644 -c ionopimax.ko /lib/modules/$(shell uname -r)
